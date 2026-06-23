@@ -1,0 +1,67 @@
+{
+  "name": "harness-kit",
+  "version": "0.1.0",
+  "description": "Harness engineering cold-start CLI tool for quickly scaffolding OSS Harness environments.",
+  "type": "module",
+  "bin": {
+    "harness-kit": "bin/harness-kit.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "node bin/harness-kit.mjs",
+    "build": "echo 'No build step for CLI tool'",
+    "lint": "eslint .",
+    "prepare": "npm run hooks:install",
+    "hooks:install": "node scripts/workflows/install-hooks.mjs",
+    "agent:bootstrap": "node scripts/workflows/contract-check.mjs bootstrap",
+    "contract:local": "node scripts/workflows/contract-check.mjs local",
+    "contract:check": "node scripts/workflows/contract-check.mjs check",
+    "contract:gitnexus": "node scripts/workflows/contract-check.mjs gitnexus",
+    "quality:predev": "npm run hooks:install && npm run contract:local",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:workflows": "node --test scripts/tests/*.test.mjs",
+    "quality:precommit": "npm run lint && npm run test && npm run test:workflows",
+    "quality:ci": "npm run lint && npm run test && npm run test:workflows",
+    "quality:local": "npm run contract:local && npm run quality:ci",
+    "prepublishOnly": "npm run quality:ci"
+  },
+  "keywords": [
+    "harness",
+    "scaffold",
+    "cli",
+    "oss",
+    "engineering",
+    "cold-start",
+    "tdd",
+    "sdd",
+    "githooks",
+    "contract"
+  ],
+  "author": "ceilf6 <ceilf6@users.noreply.github.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ceilf6/harness-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceilf6/harness-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ceilf6/harness-kit/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.5.0",
+    "globals": "^17.7.0",
+    "vitest": "^4.1.9"
+  }
+}
