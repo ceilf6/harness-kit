@@ -47,14 +47,15 @@ harness-kit uses its own Harness files. The critical skeleton has two categories
 
 Both require matching tests under `scripts/tests/` and a structured Impact Summary for PRs.
 
-Friendly Links
-Linux.do - Chinese AI learning and developer community.
-Aionui - Mobile remote-control UI for letting AI agents operate tasks from a phone.
-OfficeCLI - Office suite designed for AI agents.
-deepseek-pp - Browser extension for DeepSeek web conversations.
-MuseAI - Local AI companion, text adventure, and interactive fiction app.
-RedBox - Local AI creation workspace for Xiaohongshu creators.
-1flowbase - Virtual model gateway for publishing multi-model workflows as OpenAI/Claude-compatible endpoints, with trace, token, latency, and cost visibility.
+## Friendly Links
+
+- [Linux.do](https://linux.do/) - Chinese AI learning and developer community.
+- [Aionui](https://github.com/iOfficeAI/AionUi) - Mobile remote-control UI for letting AI agents operate tasks from a phone.
+- [OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) - Office suite designed for AI agents.
+- [deepseek-pp](https://github.com/zhu1090093659/deepseek-pp) - Browser extension for DeepSeek web conversations.
+- [MuseAI](https://github.com/yejiming/MuseAI) - Local AI companion, text adventure, and interactive fiction app.
+- [RedBox](https://github.com/Jamailar/RedBox) - Local AI creation workspace for Xiaohongshu creators.
+- [1flowbase](https://github.com/taichuy/1flowbase) - Virtual model gateway for publishing multi-model workflows as OpenAI/Claude-compatible endpoints, with trace, token, latency, and cost visibility.
 
 ## License
 
