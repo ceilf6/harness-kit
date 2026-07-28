@@ -47,6 +47,10 @@ harness-kit uses its own Harness files. The critical skeleton has two categories
 
 Both require matching tests under `scripts/tests/` and a structured Impact Summary for PRs.
 
+## Related
+
+- [harness-ceilf6](https://github.com/ceilf6/ceilf6-skills/tree/main/harness-ceilf6) — A lightweight, non-invasive harness at the agent-skill layer: plan-gated development plus an automated Claude ↔ Codex adversarial code-review loop, carried entirely by two SKILL.md files, two bash scripts, and a git-excluded local context store. Zero footprint in the target repo — no daemons, no hooks, no CI changes — making it the first choice when the environment doesn't allow repo-level harness engineering. harness-kit and harness-ceilf6 cover the two ends of the same spectrum: engineered gates where you can install them, skill-layer discipline where you can't.
+
 ## Friendly Links
 
 - [Linux.do](https://linux.do/) - Chinese AI learning and developer community.
