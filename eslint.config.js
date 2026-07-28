@@ -3,7 +3,7 @@ import globals from 'globals';
 
 export default [
   {
-    ignores: ['dist/**', 'node_modules/**', 'docs/**'],
+    ignores: ['dist/**', 'node_modules/**', 'docs/**', '.gitnexus/**'],
   },
   js.configs.recommended,
   {
