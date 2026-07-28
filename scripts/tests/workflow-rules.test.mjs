@@ -168,6 +168,12 @@ test('contract-guard.yml targets main and calls contract:gitnexus', () => {
   assert.ok(content.includes('npm run contract:gitnexus'));
 });
 
+test('README Related section links harness-ceilf6 as the skill-layer companion', () => {
+  const content = readRootFile('README.md');
+  assert.ok(content.includes('## Related'));
+  assert.ok(content.includes('https://github.com/ceilf6/ceilf6-skills/tree/main/harness-ceilf6'));
+});
+
 test('CONTRIBUTING.md exists', () => {
   assert.ok(existsSync(resolve(root, 'CONTRIBUTING.md')));
 });
